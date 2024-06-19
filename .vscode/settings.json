@@ -1,0 +1,6 @@
+{
+    "workbench.editorAssociations": {
+        "*.html": "default",
+        "file:/**/*.csv": "jupyter-data-wrangler"
+    }
+}

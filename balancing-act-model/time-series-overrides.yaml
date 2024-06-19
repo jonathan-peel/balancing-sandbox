@@ -1,0 +1,32 @@
+
+overrides:
+    time-series-for-all-years:
+        techs.open_field_pv.constraints.resource: "file=capacityfactors-open-field-pv-all-years.csv"
+        techs.wind_onshore_competing.constraints.resource: "file=capacityfactors-wind-onshore-all-years.csv"
+        techs.wind_onshore_monopoly.constraints.resource: "file=capacityfactors-wind-onshore-all-years.csv"
+        techs.wind_offshore.constraints.resource: "file=capacityfactors-wind-offshore-all-years.csv"
+        techs.hydro_run_of_river.constraints.resource: "file=capacityfactors-hydro-ror-all-years.csv"
+        techs.hydro_reservoir.constraints.resource: "file=capacityfactors-hydro-reservoir-inflow-all-years.csv"
+        techs.demand_elec.constraints.resource: "file=electricity-demand-all-years.csv"
+    model-duration-all-years:
+        model.subset_time: ['1955-01-01', '1964-12-31']
+    model-duration-1955:
+        model.subset_time: ['1955-01-01', '1955-12-31']
+    model-duration-1956:
+        model.subset_time: ['1956-01-01', '1956-12-31']
+    model-duration-1957:
+        model.subset_time: ['1957-01-01', '1957-12-31']
+    model-duration-1958:
+        model.subset_time: ['1958-01-01', '1958-12-31']
+    model-duration-1959:
+        model.subset_time: ['1959-01-01', '1959-12-31']
+    model-duration-1960:
+        model.subset_time: ['1960-01-01', '1960-12-31']
+    model-duration-1961:
+        model.subset_time: ['1961-01-01', '1961-12-31']
+    model-duration-1962:
+        model.subset_time: ['1962-01-01', '1962-12-31']
+    model-duration-1963:
+        model.subset_time: ['1963-01-01', '1963-12-31']
+    model-duration-1964:
+        model.subset_time: ['1964-01-01', '1964-12-31']

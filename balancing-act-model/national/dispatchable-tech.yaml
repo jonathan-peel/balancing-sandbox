@@ -1,0 +1,18 @@
+techs:
+    dispatchable:  # Equivalent to the biofuel technology in cost and efficiency, but without storage capabilities. See biofuel tech configuration for comments and data sources.
+        essentials:
+            name: Dispatchable thermal power plant
+            carrier: electricity
+            parent: supply
+        constraints:
+            resource: .inf
+            energy_eff: 1.0
+            lifetime: 20.0
+        costs.monetary:
+            energy_cap: 230.0 # (10,000 EUR2013/MW)
+            om_annual: 9.43 # (10,000 EUR2013/MW)
+            om_con: 0.0064827900706582375 # (10,000 EUR2013/MW)
+            om_prod: 0.0 # (10,000 EUR2013/MW)
+locations:
+    AUT,BEL,BGR,HRV,CYP,CZE,DNK,EST,FIN,FRA,DEU,GRC,HUN,IRL,ITA,LVA,LTU,LUX,NLD,POL,PRT,ROU,SVK,SVN,ESP,SWE,GBR,ALB,BIH,MKD,MNE,NOR,SRB,CHE:
+        techs.dispatchable:

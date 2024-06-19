@@ -1,0 +1,49 @@
+import:
+    - '../interest-rate.yaml'
+    - '../renewable-techs.yaml'
+    - '../storage-techs.yaml'
+    - '../link-techs.yaml'
+    - '../demand-techs.yaml'
+    - '../time-series-overrides.yaml'
+    - '../tech-costs.yaml'
+    - '../technology-mix.yaml'
+    - './load-shedding.yaml'
+    - './dispatchable-tech.yaml'
+    - './locations.yaml'
+    - './entsoe-tyndp-links.yaml'
+model:
+    name: 'Balancing Act'
+    calliope_version: 0.6.8
+    timeseries_data_path: './'
+    subset_time: ['2016-01-01', '2016-12-31']
+run:
+    objective_options: {
+        'cost_class': {'monetary': 1},
+        'sense': 'minimize'
+    }
+    solver: gurobi
+    solver_io: python
+    mode: plan
+    solver_options:
+        Threads: 6
+        Method: 2 # use barrier, but do not run simplex in parallel
+        Crossover: 0 # stop after barrier, do not perform crossover
+        FeasibilityTol: 1e-3
+        OptimalityTol: 1e-4
+overrides:
+    no-hydro-costs:
+        # Because we force all hydro to current levels, there
+        # should be annual O&M costs and variable costs only.
+        techs.pumped_hydro.costs.monetary.storage_cap: 0
+        techs.pumped_hydro.costs.monetary.energy_cap: 0
+        techs.hydro_run_of_river.costs.monetary.energy_cap: 0
+        techs.hydro_run_of_river.costs.monetary.om_con: 0
+        techs.hydro_reservoir.costs.monetary.storage_cap: 0
+        techs.hydro_reservoir.costs.monetary.energy_cap: 0
+        techs.hydro_reservoir.costs.monetary.om_con: 0
+    no-rooftop-pv: # we don't have 100yrs of timeseries for those technologies
+        techs.roof_mounted_pv.exists: false
+    no-biofuel:
+        techs.biofuel.exists: false
+    no-battery:
+        techs.battery.exists: false
