@@ -16,6 +16,9 @@ model:
     calliope_version: 0.6.8
     timeseries_data_path: './'
     subset_time: ['2016-01-01', '2016-12-31']
+    time:
+        function: resample
+        function_options: {'resolution': '4380H'}
 run:
     objective_options: {
         'cost_class': {'monetary': 1},
@@ -31,6 +34,7 @@ run:
         FeasibilityTol: 1e-3
         OptimalityTol: 1e-4
 overrides:
+    # TODO: consider cleaning by just not importing certain files at start of this file
     no-hydro-costs:
         # Because we force all hydro to current levels, there
         # should be annual O&M costs and variable costs only.
