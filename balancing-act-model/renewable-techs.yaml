@@ -41,7 +41,7 @@ techs:
             name: Roof mounted PV
             parent: pv_on_roof
         constraints:
-            resource: file=capacityfactors-rooftop-pv.csv
+            # resource: file=capacityfactors-rooftop-pv.csv # we don't have 100yrs of timeseries for these technologies
             resource_unit: energy_per_cap
     wind_onshore_monopoly:
         essentials:
