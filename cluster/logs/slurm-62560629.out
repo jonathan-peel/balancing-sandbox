@@ -1,0 +1,8 @@
+Calliope 0.6.10 starting at 2024-06-19 17:32:43
+
+[2024-06-19 17:32:43] INFO     Model: initialising
+
+Error in from_yaml, /cluster/home/jopeel/miniconda3/envs/calliope/lib/python3.9/site-packages/calliope/core/attrdict.py:176
+[Errno 2] No such file or directory: 'testmodel/model.yaml'
+
+Calliope run aborted due to an error. Elapsed: 0.0 seconds (time at exit: 2024-06-19 17:32:43)
