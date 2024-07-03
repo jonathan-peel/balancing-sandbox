@@ -18,7 +18,7 @@ model:
     subset_time: ['2016-01-01', '2016-12-31']
     time:
         function: resample
-        function_options: {'resolution': '4380H'}
+        function_options: {'resolution': 'D'}
 run:
     objective_options: {
         'cost_class': {'monetary': 1},
