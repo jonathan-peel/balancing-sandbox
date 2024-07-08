@@ -1,0 +1,47 @@
+
+Gurobi 11.0.2 (linux64, gurobi_cl) logging started Thu Jun 20 16:44:07 2024
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Using license file /cluster/home/jopeel/gurobi.lic
+Academic license - for non-commercial use only - expires 2025-06-19
+
+Gurobi 11.0.2 (linux64, gurobi_cl) logging started Thu Jun 20 17:10:00 2024
+
+Set parameter LogFile to value "gurobi.log"
+Using license file /cluster/home/jopeel/miniconda3/envs/calliope/bin/../lib/gurobi.lic
+Restricted license - for non-production use only - expires 2025-11-24
+
+Gurobi 11.0.2 (linux64, gurobi_cl) logging started Thu Jun 20 17:10:09 2024
+
+Set parameter LogFile to value "gurobi.log"
+Using license file /cluster/home/jopeel/miniconda3/envs/calliope/bin/../lib/gurobi.lic
+Restricted license - for non-production use only - expires 2025-11-24
+
+Gurobi 11.0.2 (linux64, gurobi_cl) logging started Thu Jun 20 17:11:38 2024
+
+Set parameter LogFile to value "gurobi.log"
+
+Gurobi 9.0.0 (linux64, gurobi_cl) logging started Thu Jun 20 17:17:21 2024
+
+Using license file /cluster/apps/gurobi/9.0.0/x86_64/gurobi.lic
+Set parameter TokenServer to value lic-gurobi.ethz.ch
+Set parameter LogFile to value gurobi.log
+
+Gurobi 11.0.2 (linux64, gurobi_cl) logging started Thu Jun 20 17:30:24 2024
+
+Set parameter LogFile to value "gurobi.log"
+
+Gurobi 11.0.2 (linux64, gurobi_cl) logging started Thu Jun 20 17:32:25 2024
+
+Set parameter LogFile to value "gurobi.log"
+
+Gurobi 11.0.2 (linux64, gurobi_cl) logging started Thu Jun 20 17:32:31 2024
+
+Set parameter LogFile to value "gurobi.log"
+
+Gurobi 9.0.2 (linux64, gurobi_cl) logging started Thu Jun 20 17:37:19 2024
+
+Using license file /cluster/apps/nss/gurobi/9.0.2/x86_64/gurobi.lic
+Set parameter TokenServer to value lic-gurobi.ethz.ch
+Set parameter LogFile to value gurobi.log

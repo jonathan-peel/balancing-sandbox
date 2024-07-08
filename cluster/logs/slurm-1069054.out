@@ -1,0 +1,240 @@
+Calliope 0.6.10 starting at 2024-07-03 17:15:55
+
+[2024-07-03 17:15:55] INFO     Model: initialising
+[2024-07-03 17:15:56] INFO     Applying the following overrides from scenario definition: ['model-duration-1955', 'tm001', 'time-series-for-all-years'] 
+[2024-07-03 17:15:56] INFO     `group_constraints.dispatchable_cap_lim.energy_cap_max`:1.72859854386996 applied from override as new configuration
+`group_constraints.dispatchable_cap_lim.energy_cap_min`:1.72759854386996 applied from override as new configuration
+`group_constraints.dispatchable_cap_lim.techs`:['dispatchable'] applied from override as new configuration
+`group_constraints.dispatchable_energy_lim.carrier_prod_max.electricity`:14640.391813545702 applied from override as new configuration
+`group_constraints.dispatchable_energy_lim.techs`:['dispatchable'] applied from override as new configuration
+`group_constraints.hydrogen_storage_lim.energy_cap_max`:1.26581836310371 applied from override as new configuration
+`group_constraints.hydrogen_storage_lim.energy_cap_min`:1.2648183631037102 applied from override as new configuration
+`group_constraints.hydrogen_storage_lim.storage_cap_max`:3453.99707140609 applied from override as new configuration
+`group_constraints.hydrogen_storage_lim.storage_cap_min`:3452.99707140609 applied from override as new configuration
+`group_constraints.hydrogen_storage_lim.techs`:['hydrogen'] applied from override as new configuration
+`group_constraints.pv_lim.energy_cap_max`:13.789352308805002 applied from override as new configuration
+`group_constraints.pv_lim.energy_cap_min`:13.788352308805 applied from override as new configuration
+`group_constraints.pv_lim.techs`:['open_field_pv'] applied from override as new configuration
+`group_constraints.wind_offshore_lim.energy_cap_max`:1.55950665356399 applied from override as new configuration
+`group_constraints.wind_offshore_lim.energy_cap_min`:1.55850665356399 applied from override as new configuration
+`group_constraints.wind_offshore_lim.techs`:['wind_offshore'] applied from override as new configuration
+`group_constraints.wind_onshore_lim.energy_cap_max`:4.04432348142083 applied from override as new configuration
+`group_constraints.wind_onshore_lim.energy_cap_min`:4.04332348142083 applied from override as new configuration
+`group_constraints.wind_onshore_lim.techs`:['wind_onshore_monopoly', 'wind_onshore_competing'] applied from override as new configuration
+Override applied to model.subset_time: ['2016-01-01', '2016-12-31'] -> ['1955-01-01', '1955-12-31']
+Override applied to techs.demand_elec.constraints.resource: file=electricity-demand.csv -> file=electricity-demand-all-years.csv
+Override applied to techs.hydro_reservoir.constraints.resource: file=capacityfactors-hydro-reservoir-inflow.csv -> file=capacityfactors-hydro-reservoir-inflow-all-years.csv
+Override applied to techs.hydro_run_of_river.constraints.resource: file=capacityfactors-hydro-ror.csv -> file=capacityfactors-hydro-ror-all-years.csv
+Override applied to techs.open_field_pv.constraints.resource: file=capacityfactors-open-field-pv.csv -> file=capacityfactors-open-field-pv-all-years.csv
+Override applied to techs.wind_offshore.constraints.resource: file=capacityfactors-wind-offshore.csv -> file=capacityfactors-wind-offshore-all-years.csv
+`techs.wind_onshore_competing.constraints.resource`:file=capacityfactors-wind-onshore-all-years.csv applied from override as new configuration
+`techs.wind_onshore_monopoly.constraints.resource`:file=capacityfactors-wind-onshore-all-years.csv applied from override as new configuration
+[2024-07-03 17:15:57] WARNING  /cluster/home/jopeel/miniconda3/envs/calliope/lib/python3.9/site-packages/calliope/exceptions.py:60: ModelWarning:
+
+Possible issues found during model processing:
+ * Model configuration specifies calliope_version=0.6.8, but you are running 0.6.10. Proceed with caution!
+
+
+[2024-07-03 17:16:01] INFO     `battery` at `ALB` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `ALB` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `ALB` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `ALB` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `ALB` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `AUT` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `AUT` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `AUT` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `AUT` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `AUT` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `BEL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `BEL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `BEL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `BEL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `BEL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `BGR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `BGR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `BGR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `BGR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `BGR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `HRV` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `HRV` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `HRV` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `HRV` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `HRV` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `CYP` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `CYP` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `CYP` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `CYP` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `CYP` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `CZE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `CZE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `CZE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `CZE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `CZE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `DNK` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `DNK` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `DNK` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `DNK` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `DNK` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `EST` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `EST` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `EST` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `EST` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `EST` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `FIN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `FIN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `FIN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `FIN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `FIN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `FRA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `FRA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `FRA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `FRA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `FRA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `DEU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `DEU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `DEU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `DEU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `DEU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `GRC` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `GRC` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `GRC` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `GRC` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `GRC` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `HUN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `HUN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `HUN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `HUN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `HUN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `IRL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `IRL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `IRL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `IRL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `IRL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `ITA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `ITA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `ITA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `ITA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `ITA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `LVA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `LVA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `LVA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `LVA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `LVA` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `LTU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `LTU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `LTU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `LTU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `LTU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `LUX` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `LUX` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `LUX` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `LUX` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `LUX` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `NLD` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `NLD` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `NLD` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `NLD` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `NLD` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `POL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `POL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `POL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `POL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `POL` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `PRT` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `PRT` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `PRT` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `PRT` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `PRT` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `ROU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `ROU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `ROU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `ROU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `ROU` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `SVK` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `SVK` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `SVK` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `SVK` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `SVK` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `SVN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `SVN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `SVN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `SVN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `SVN` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `ESP` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `ESP` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `ESP` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `ESP` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `ESP` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `SWE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `SWE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `SWE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `SWE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `SWE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `GBR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `GBR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `GBR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `GBR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `GBR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `BIH` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `BIH` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `BIH` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `BIH` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `BIH` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `MKD` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `MKD` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `MKD` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `MKD` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `MKD` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `MNE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `MNE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `MNE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `MNE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `MNE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `NOR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `NOR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `NOR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `NOR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `NOR` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `SRB` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `SRB` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `SRB` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `SRB` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `SRB` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `battery` at `CHE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `biofuel` at `CHE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydro_reservoir` at `CHE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `hydrogen` at `CHE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     `pumped_hydro` at `CHE` has no constraint to explicitly connect `energy_cap` to `storage_cap`, consider defining a `energy_cap_per_storage_cap_min/max/equals` constraint
+[2024-07-03 17:16:01] INFO     Model: preprocessing stage 1 (model_run)
+[2024-07-03 17:16:07] INFO     Model: preprocessing stage 2 (model_data)
+[2024-07-03 17:16:15] INFO     Model: time resampling/clustering complete
+[2024-07-03 17:16:15] INFO     Model: preprocessing complete
+Model name:   Balancing Act
+Model size:   34 locations, 16 technologies, 365 timesteps
+
+Starting model run...
+[2024-07-03 17:16:15] INFO     Backend: starting model run
+[2024-07-03 17:16:15] INFO     Loading sets
+[2024-07-03 17:16:15] INFO     Loading parameters
+[2024-07-03 17:16:18] INFO     constraints are loaded in the following order: ['capacity', 'costs', 'dispatch', 'energy_balance', 'network', 'policy', 'conversion', 'conversion_plus', 'group', 'export', 'milp']
+[2024-07-03 17:16:18] INFO     creating capacity constraints
+[2024-07-03 17:16:18] INFO     creating costs constraints
+[2024-07-03 17:16:37] INFO     creating dispatch constraints
+[2024-07-03 17:16:48] INFO     creating energy_balance constraints
+[2024-07-03 17:17:03] INFO     creating network constraints
+[2024-07-03 17:17:03] INFO     creating policy constraints
+[2024-07-03 17:17:03] INFO     creating conversion constraints
+[2024-07-03 17:17:03] INFO     creating conversion_plus constraints
+[2024-07-03 17:17:03] INFO     creating group constraints
+[2024-07-03 17:17:03] INFO     creating export constraints
+[2024-07-03 17:17:03] INFO     creating milp constraints
+[2024-07-03 17:17:03] INFO     Backend: model generated. Time since start of model run: 0:00:48.417354
+[2024-07-03 17:17:03] INFO     Backend: sending model to solver
+[2024-07-03 17:17:04] WARNING  
+Could not create Model - gurobi message=No Gurobi license found (user jopeel, host eu-g1-042-4, hostid 99b515dc, cores 128)
+
+
+Error in available, /cluster/home/jopeel/miniconda3/envs/calliope/lib/python3.9/site-packages/pyomo/solvers/plugins/solvers/gurobi_direct.py:146
+Could not create a gurobipy Model for <class 'pyomo.solvers.plugins.solvers.gurobi_direct.GurobiDirect'> solver plugin
+
+Calliope run aborted due to an error. Elapsed: 68.7 seconds (time at exit: 2024-07-03 17:17:04)
